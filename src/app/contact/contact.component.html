@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+              <form  #f="ngForm" (submit)="submit(f.value)" novalidate>
+                <div class="form-group">
+                  <label >Name</label>
+                  <input type="text" class="form-control" [(ngModel)]="name1" name="name" #name="ngModel" required>
+                  <div *ngIf="name.invalid && f.submitted" class="text-danger"> Name required</div>
+                </div>
+                <div class="form-group">
+                    <label >Email id</label>
+                    <input type="email" class="form-control" [(ngModel)]="email1" name="email" #email="ngModel" required>
+                    <div *ngIf="name.invalid && f.submitted" class="text-danger">Email id required</div>
+                 
+                  </div>
+                <div class="form-group">
+                  <label >Mobile Number</label>
+                  <input type="text" class="form-control"  [(ngModel)]="mobileno1" name="mobileno" #mobileno="ngModel" required>
+                  <div *ngIf="name.invalid && f.submitted" class="text-danger">Mobile Number required</div>
+                </div>
+               
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>

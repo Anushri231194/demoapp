@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <button type="button" class="btn btn-primary" (click)="showtext()">Show text</button>
+        <div class="col-md-12 mt-2" *ngIf="show">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+        </div>
+    </div>
+  
+    <div class="clearfix"></div><br>
+    <div class="row ">
+            <button type="button" class="btn btn-primary" (click)="shownext()">Show next</button>
+            <div class="col-md-12 mt-2" *ngIf="showcont; else othercontent">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            </div>
+            <div class="col-md-12 mt-2">
+                    <ng-template #othercontent>
+                            Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
+                    </ng-template>
+            </div>
+        </div>
+</div>
